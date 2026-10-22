@@ -1,0 +1,61 @@
+name: Bug report
+description: Something doesn't work the way it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. Security problems go through private reporting instead, see the Security tab.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, including any error message or log output.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package and version
+      placeholder: discord-dashboard 3.1.0-alpha.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Discord
+        - Slack
+        - Telegram
+        - Twitch
+        - Other or not relevant
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Lite (in process)
+        - Platform (Postgres and Redis)
+        - Not sure
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      description: Node or Python version, and the OS.
+      placeholder: Node 22, Ubuntu 24.04
